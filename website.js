@@ -9,6 +9,7 @@ function run() {
     aboutMe.style.boxShadow = '0px 0px 16px 2px rgb(139, 30, 255)';
     aboutMe.style.transition ='all 1s ease'
     setTimeout(removeShadow, 1000);
+    window.location.href = '#about'
 }
 
 function removeShadow (){
@@ -25,10 +26,11 @@ two.addEventListener('click', run2)
 
 let animate = document.querySelector('.animate')
 function run2() {
-
+    
     animate.style.boxShadow = '0px 0px 16px 2px rgb(139, 30, 255)';
     animate.style.transition ='all 1s ease'
     setTimeout(removeShadow2, 1000);
+    window.location.href = '#ani'
 }
 
 function removeShadow2 (){
@@ -46,10 +48,11 @@ three.addEventListener('click', run3)
 
 let social = document.querySelector('.socials')
 function run3() {
-
+    
     social.style.boxShadow = '0px 0px 16px 2px rgb(139, 30, 255)';
     social.style.transition ='all 1s ease'
     setTimeout(removeShadow3, 1000);
+    window.location.href = '#socials'
 }
 
 function removeShadow3 (){
