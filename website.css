@@ -1,0 +1,318 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: 's';
+    src: url(./ok/Poppins-Bold.ttf)
+}
+
+@font-face {
+    font-family: 'Main';
+    src: url(./Geologica/static/Geologica-Bold.ttf);
+}
+
+p {
+    font-family: 's';
+    font-size: 13px;
+}
+
+h1,
+h2,
+h3 {
+    font-family: 'Main';
+
+}
+
+body {
+    background-color: black;
+}
+
+
+
+
+.container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.middlecontainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 80%;
+    /* height: 90%; */
+    /* border: 3px solid white; */
+    /* position: absolute; */
+}
+
+header {
+    /* box-shadow: 0px 0px 16px 2px rgb(139, 30, 255); */
+    width: 80%;
+    height: 80px;
+    border-radius: 6px;
+    margin: 40px 0px;
+    border: 1.5px rgb(110, 0, 207) solid;
+    z-index: 1;
+    background-image: linear-gradient(rgb(0, 0, 0),rgb(31, 0, 42));
+}
+
+
+button {
+    display: none;
+}
+
+.avatar {
+    /* position: absolute; */
+    width: 25%;
+    border: 1.5px rgb(110, 0, 207) solid;
+    background-image: linear-gradient(rgb(0, 0, 0),rgb(30, 0, 41));
+    z-index: 1;
+  
+    height: 200px;
+    border-radius: 25px;
+    /* box-shadow: 0px 0px 16px 2px rgb(139, 30, 255); */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.about {
+    width: 70%;
+    height: 200px;
+    border: 1.5px rgb(110, 0, 207) solid;
+    background-image: linear-gradient(rgb(0, 0, 0),rgb(30, 0, 41));
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 25px;
+    /* box-shadow: 0px 0px 16px 2px rgb(139, 30, 255); */
+}
+.about p{
+    font-size: 12px;
+}
+
+
+.imgdiv{
+    width: 30%;
+}
+.animate {
+    margin: 40px 0px;
+    width: 45%;
+    height: 200px;
+    border: 1.5px rgb(110, 0, 207) solid;
+    background-image: linear-gradient(rgb(0, 0, 0),rgb(30, 0, 41));
+    z-index: 1;
+    border-radius: 10px;
+    display: flex;
+    text-align: center;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    /* box-shadow: 0px 0px 16px 2px rgb(139, 30, 255); */
+    overflow: hidden;
+    position: relative;
+}
+
+.inline {
+    height: 30%;
+    width: 200%;
+    position: absolute;
+    display: flex;
+align-items:center;
+    justify-content: space-evenly;
+    /* transition: all 0.5s; */
+    animation: idk 20s linear infinite;
+    transition: all ease;
+    /* border: 2px solid red; */
+    top: 38%;
+    border: 1.5px rgb(47, 0, 89) solid;
+    background-image:radial-gradient((rgb(0, 0, 0),rgb(167, 26, 218)));
+    z-index: 1;
+}
+
+.socials {
+    border-radius: 10px;
+    width: 50%;
+    height: 200px;
+    margin: 40px 0px;
+    /* box-shadow: 0px 0px 16px 2px rgb(139, 30, 255); */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+    border: 1.5px rgb(110, 0, 207) solid;
+    background-image: linear-gradient(rgb(0, 0, 0),rgb(30, 0, 41));
+    z-index: 1;
+}
+
+
+.outline .svgdiv {
+    width: 60px;
+    height: 50px;
+}
+.outlinepro{
+    width: 100%;
+}
+.outline {
+    display: flex;
+    align-items: center;
+justify-content: center;
+
+    width: 100%;
+
+}
+
+.outline .svgdiv{
+margin: 0px 5px;
+}
+
+
+svg {
+    background-color: inherit;
+    width: 30px;
+    height: 30px;
+}
+
+
+
+
+.snowfall-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 0
+}
+
+.snowflake {
+    position: absolute;
+    width: 3px;
+    height: 3px;
+    background-color: var(--white-neutral1);
+    border-radius: 50%;
+    animation: fall linear infinite;
+    transform-origin: 50% 50%
+}
+
+@keyframes fall {
+    0% {
+        transform: translateY(-100vh)
+    }
+
+    to {
+        transform: translateY(100vh)
+    }
+}
+
+
+
+.svgdiv:hover {
+    background-color: rgb(139, 30, 255);
+    border: rgb(255, 255, 255);
+}
+
+
+.svgdiv {
+    width: 50px;
+    height: 50px;
+    background-color: rgb(29, 29, 29);
+    border: 1px rgb(42, 42, 42) solid;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 0px 10px 2px rgb(139, 30, 255);
+}
+
+footer {
+    margin-top: 100px;
+    width: 100%;
+    height: 50px;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 70px;
+}
+
+
+
+@media screen and (max-width: 768px) {
+
+
+    header {
+        height: 70px;
+        font-size: 8px;
+    }
+
+    .imgdiv {
+        width: 25%;
+    }
+
+
+    .avatar {
+        width: 100%;
+        overflow: hidden;
+        margin-bottom: 40px;
+    }
+
+
+    .about {
+        width: 100%;
+        height: 400px;
+        
+    }
+.about p{
+    font-size: 15px;
+}
+
+    .animate {
+        width: 100%;
+    }
+
+    .socials {
+        width: 100%;
+        margin-top: 0px;
+    }
+
+}
+
+
+
+@keyframes idk {
+    from {
+        right: 0px
+    }
+
+    to {
+        right: -100%;
+    }
+}
+
+
+
+  
+  .avatar h2 {
+    font-size: 20px;
+    color: white;
+  }
+  
+  span {
+    border-right: 3px solid;
+    animation: caret 1s steps(1) infinite;
+  }
+  
+  @keyframes caret {
+    50% {
+      border-color: transparent;
+    }
+  }
+  
