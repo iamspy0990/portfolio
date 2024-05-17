@@ -6,7 +6,7 @@ one.addEventListener('click', run)
 let aboutMe = document.querySelector('.about')
 function run() {
 
-    aboutMe.style.boxShadow = '0px 0px 16px 2px orange';
+    aboutMe.style.boxShadow = '0px 0px 16px 2px rgb(188, 137, 255)';
     aboutMe.style.transition ='all 1s ease'
     setTimeout(removeShadow, 1000);
     window.location.href = '#about'
@@ -27,7 +27,7 @@ two.addEventListener('click', run2)
 let animate = document.querySelector('.animate')
 function run2() {
     
-    animate.style.boxShadow = '0px 0px 16px 2px orange';
+    animate.style.boxShadow = '0px 0px 16px 2px rgb(188, 137, 255)';
     animate.style.transition ='all 1s ease'
     setTimeout(removeShadow2, 1000);
     window.location.href = '#ani'
@@ -49,7 +49,7 @@ three.addEventListener('click', run3)
 let social = document.querySelector('.socials')
 function run3() {
     
-    social.style.boxShadow = '0px 0px 16px 2px orange';
+    social.style.boxShadow = '0px 0px 16px 2px rgb(188, 137, 255)';
     social.style.transition ='all 1s ease'
     setTimeout(removeShadow3, 1000);
     window.location.href = '#socials'
@@ -74,7 +74,7 @@ document.addEventListener('DOMContentLoaded',function(event){
       if (i < (text.length)) {
         // add next character to h1
         if(i >= 8){
-            document.querySelector("#ooo").innerHTML = text.substring(0, 8) + '<span style="color:orange;">'+ text.substring(8, i+1) +'</span>' +'<span aria-hidden="true"></span>';
+            document.querySelector("#ooo").innerHTML = text.substring(0, 8) + '<span style="color:rgb(188, 137, 255);">'+ text.substring(8, i+1) +'</span>' +'<span aria-hidden="true"></span>';
         }else{
             document.querySelector("#ooo").innerHTML = text.substring(0, i+1) +'<span aria-hidden="true"></span>';
         }
