@@ -111,5 +111,5 @@ document.addEventListener('DOMContentLoaded',function(event){
   });
  
 if (window.performance.navigation.type === 1) {
-  window.location.href = "http://127.0.0.1:5500/loader.html";
+  window.location.href = "https://iamspy0990.github.io/portfolio/";
 }
