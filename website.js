@@ -68,7 +68,7 @@ document.addEventListener('DOMContentLoaded',function(event){
     var dataText = ["Hey, Im Spy"];
     
     // type one text in the typwriter
-    // keeps calling itself until the text is finished
+    // keeps calling itself until the text is finssished
     function typeWriter(text, i, fnCallback) {
       // chekc if text isn't finished yet
       if (i < (text.length)) {
@@ -110,3 +110,6 @@ document.addEventListener('DOMContentLoaded',function(event){
     StartTextAnimation(0);
   });
  
+if (window.performance.navigation.type === 1) {
+  window.location.href = "http://127.0.0.1:5500/loader.html";
+}
