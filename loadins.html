@@ -33,15 +33,15 @@
 @keyframes shadowPulse {
   33% {
     background: #FFF;
-    box-shadow: -24px 0 #7b00ff, 24px 0 #FFF;
+    box-shadow: -24px 0 rgb(255, 0, 0), 24px 0 #FFF;
   }
   66% {
-    background: #7b00ff;
+    background: rgb(255, 0, 0);
     box-shadow: -24px 0 #FFF, 24px 0 #FFF;
   }
   100% {
     background: #FFF;
-    box-shadow: -24px 0 #FFF, 24px 0 #7b00ff;
+    box-shadow: -24px 0 #FFF, 24px 0 rgb(255, 0, 0);
   }
 }
     </style>
@@ -51,7 +51,7 @@
     <div>
     <span class="loader"></span>
     <script>
-var count = 2;
+var count = 3;
 var countdownMessage = document.getElementById("countdownMessage");
 var countdownInterval = setInterval(function() {
   count--;
