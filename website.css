@@ -55,7 +55,11 @@ body {
 
 
 header {
-
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    justify-content: space-evenly;
     /* box-shadow: 0px 0px 16px 2px rgb(139, 30, 255); */
     width: 80%;
     height: 80px;
@@ -64,12 +68,77 @@ header {
     border: 1.5px rgb(255, 0, 0) solid;
     z-index: 1;
     background-color: rgb(36, 36, 36);
-    background-image: linear-gradient(rgb(30, 30, 30),rgb(0, 0, 0))
+    background-image: linear-gradient(rgb(30, 30, 30), rgb(0, 0, 0))
 }
 
-header p{
+.menu {
+    display: none;
+    position: fixed;
+    font-family: 'Main';
+    color: white;
+    right: 47px;
+    top: 10px;
+    padding: 10px 30px;
+    z-index: 4;
+    width: 80%;
+    box-shadow: 0px 0px 10px 3px rgb(0, 0, 0);
+    border: none;
+    height: 50px;
+    background-image: linear-gradient(rgb(0, 0, 0), rgb(69, 69, 69))
+    
+
+}
+header .closeBTN{
+    display: none;
+}
+
+@media (max-width:768px) {
+    .menu {
+        display: block;
+    }
+
+
+    p{
+        font-size: 30px;
+    }
+    header {
+        
+        background-image: none;
+        background-image: linear-gradient(rgb(0, 0, 0), rgb(32, 32, 32));
+        /* visibility: hidden; */
+        flex-direction: column;
+        position: fixed;
+        top: 0px;
+        left: -100%;
+        z-index: 10;
+        margin: 0;
+        height: 100vh !important;
+        transition: all 0.4s ease;
+    }
+
+    header .closeBTN {
+        color: rgb(255, 0, 0);
+        text-shadow: 0px 0px 12px red;
+        font-size: 28px;
+        position: absolute;
+        top: 0px;
+        right: -9px;
+        font-family: sans-serif;
+        background-color: rgba(255, 0, 0, 0);
+        width: 50px;
+        height: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 40px;
+        cursor: pointer;
+    }
+}
+
+header p {
     cursor: pointer;
 }
+
 button {
     display: none;
 }
@@ -78,9 +147,9 @@ button {
     /* position: absolute; */
     width: 25%;
     border: 1.5px rgb(255, 0, 0) solid;
-    background-image: linear-gradient(rgb(30, 30, 30),rgb(0, 0, 0));
+    background-image: linear-gradient(rgb(30, 30, 30), rgb(0, 0, 0));
     z-index: 1;
-  
+
     height: 200px;
     border-radius: 10px;
     /* box-shadow: 0px 0px 16px 2px rgb(139, 30, 255); */
@@ -92,8 +161,9 @@ button {
 .about {
     width: 70%;
     height: 200px;
-    border: 1.5px rgb(255, 0, 0) solid;;
-    background-image: linear-gradient(rgb(30, 30, 30),rgb(0, 0, 0));
+    border: 1.5px rgb(255, 0, 0) solid;
+    ;
+    background-image: linear-gradient(rgb(30, 30, 30), rgb(0, 0, 0));
     z-index: 1;
     display: flex;
     align-items: center;
@@ -102,23 +172,26 @@ button {
     border-radius: 10px;
     /* box-shadow: 0px 0px 16px 2px rgb(139, 30, 255); */
 }
-.about p{
+
+.about p {
     font-size: 12px;
 }
-.about h2{
+
+.about h2 {
     margin-top: 30px;
 }
 
 
-.imgdiv{
+.imgdiv {
     width: 30%;
 }
+
 .animate {
     margin: 40px 0px;
     width: 40%;
     height: 200px;
     border: 1.5px rgb(255, 0, 0) solid;
-    background-image: linear-gradient(rgb(30, 30, 30),rgb(0, 0, 0));
+    background-image: linear-gradient(rgb(30, 30, 30), rgb(0, 0, 0));
     z-index: 1;
     border-radius: 10px;
     display: flex;
@@ -129,8 +202,8 @@ button {
     /* box-shadow: 0px 0px 16px 2px rgb(139, 30, 255); */
     overflow: hidden;
     position: relative;
-/* margin-right: 20px; */
-margin-right: 40px;
+    /* margin-right: 20px; */
+    margin-right: 40px;
 }
 
 
@@ -139,14 +212,14 @@ margin-right: 40px;
     width: 200%;
     position: absolute;
     display: flex;
-align-items:center;
+    align-items: center;
     justify-content: space-evenly;
     /* transition: all 0.5s; */
     animation: idk 20s linear infinite;
     transition: all ease;
     /* border: 2px solid red; */
     top: 38%;
-    background-image:radial-gradient((rgb(0, 0, 0),rgb(167, 26, 218)));
+    background-image: radial-gradient((rgb(0, 0, 0), rgb(167, 26, 218)));
     z-index: 1;
 }
 
@@ -161,36 +234,40 @@ align-items:center;
     flex-direction: column;
     justify-content: center;
     gap: 10px;
-    border: 1.5px rgb(255, 0, 0) solid;;
-    background-image: linear-gradient(rgb(30, 30, 30),rgb(0, 0, 0));
+    border: 1.5px rgb(255, 0, 0) solid;
+    ;
+    background-image: linear-gradient(rgb(30, 30, 30), rgb(0, 0, 0));
     z-index: 1;
 }
 
-.socials .svgdiv{
+.socials .svgdiv {
     box-shadow: 0px 0px 10px 2px rgb(255, 0, 0);
 }
-.socials .svgdiv:hover{
-background-color: rgb(255, 0, 0);
+
+.socials .svgdiv:hover {
+    background-color: rgb(255, 0, 0);
 }
 
 .outline .svgdiv {
     width: 60px;
     height: 50px;
 }
-.outlinepro{
+
+.outlinepro {
     width: 100%;
 }
+
 .outline {
     display: flex;
     align-items: center;
-justify-content: center;
+    justify-content: center;
 
     width: 100%;
 
 }
 
-.outline .svgdiv{
-margin: 0px 5px;
+.outline .svgdiv {
+    margin: 0px 5px;
 }
 
 
@@ -288,11 +365,12 @@ footer {
     .about {
         width: 100%;
         height: 400px;
-        
+
     }
-.about h3{
-    font-size: 20px;
-}
+
+    .about h3 {
+        font-size: 20px;
+    }
 
     .animate {
         width: 100%;
@@ -320,20 +398,19 @@ footer {
 
 
 
-  
-  .avatar h2 {
+
+.avatar h2 {
     font-size: 20px;
     color: white;
-  }
-  
-  span {
+}
+
+span {
     border-right: 3px solid;
     animation: caret 1s steps(1) infinite;
-  }
-  
-  @keyframes caret {
+}
+
+@keyframes caret {
     50% {
-      border-color: transparent;
+        border-color: transparent;
     }
-  }
-  
+}

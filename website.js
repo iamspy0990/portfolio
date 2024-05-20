@@ -119,3 +119,40 @@ document.addEventListener('DOMContentLoaded',function(event){
         document.querySelector("body").style.visibility = "visible";
     }
 };
+
+window.addEventListener("mousemove", (e)=>{
+  let t = e.screenY;
+  let l = e.screenX;
+  let elem = document.querySelector('.mousePillion');
+  elem.style.top = t + 'px';
+  elem.style.left = l + 'px';
+  console.log(t, l)
+})
+
+// open header on mobile
+let closeBTN = document.querySelector('.closeBTN');
+let menu = document.querySelector(".menu");
+let header = document.querySelector("header");
+let body = document.body;
+
+menu.addEventListener("click", (e)=>{
+  header.style.left = "0%";
+  e.target.style.display = 'none';
+  body.style.height = "100vh";
+  body.style.overflowY = "hidden";
+})
+
+// close header on mobile
+closeBTN.addEventListener("click", closeHeader)
+
+function closeHeader (e){
+  header.style.left = "-100%";
+  menu.style.display = "block";
+  body.style.height = "auto";
+  body.style.overflowY = "auto";
+}
+
+let headerPara = document.querySelectorAll('header p')
+headerPara.forEach((i)=>{
+  i.addEventListener('click',closeHeader)
+})

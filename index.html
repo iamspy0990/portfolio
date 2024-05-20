@@ -246,33 +246,33 @@
             <div class="inner">❅</div>
         </div>
     </div>
-
+    
     <div class="container">
-        <header class=""
-            style="display: flex;align-items: center; text-align: center; justify-content: center; justify-content: space-evenly;">
-
+        <header>
+            <a href="javascript:void(0)" class="closeBTN">✘</a>
             <p class="one" style="color: white; ">
                 About Me
             </p>
-
+            
 
 
             <p class="two" style="color: white; ">
                 My Skills
             </p>
-
-
+            
+            
             <p class="three" style="color: white; ">
                 Socials
             </p>
-
-
-
-
+            
+            
+            
+            
         </header>
     </div>
     <span class="loader" id="loader"></span>
     <div class="container">
+        <button class="menu">Menu</button>
         <div class="middlecontainer">
             <div class="avatar"
                 style="align-items: center; justify-content: center; text-align: center; transition: all 1s ease"
@@ -551,6 +551,26 @@
     <script>
         AOS.init();
     </script>
+    <style>
+        .mousePillion{
+            height: 50px;
+            width: 50px;
+            position: fixed;
+            background-color: rgba(255, 255, 255, 0.391);
+            backdrop-filter: blur(5px);
+            border-radius: 100%;
+            transform: translate(-45%, -260%);
+            z-index: 2;
+            user-select: none;
+            pointer-events: none;
+        }
+        @media (max-width:768px){
+            .mousePillion{
+                display: none;
+            }
+        }
+    </style>
+    <div class="mousePillion"></div>
 </body>
 
 </html>
