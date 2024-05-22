@@ -14,7 +14,7 @@
 
         body {
 
-            background-color: rgb(22, 22, 22);
+            background-color: rgb(17, 17, 17);
             transition: background-color 0.5s ease;
         }
 
@@ -24,7 +24,6 @@
         }
 
         header {
-
             text-align: center;
         }
 
@@ -176,33 +175,7 @@
             left: 65%;
             animation-delay: 2.5s
         }
-        .loader {
-  width: 16px;
-  height: 16px;
-  border-radius: 50%;
-  display: block;
-  margin:15px auto;
-  position: relative;
-  background: #FFF;
-  box-shadow: -24px 0 #FFF, 24px 0 #FFF;
-  box-sizing: border-box;
-  animation: shadowPulse 2s linear infinite;
-}
-
-@keyframes shadowPulse {
-  33% {
-    background: #FFF;
-    box-shadow: -24px 0 rgb(255, 0, 0), 24px 0 #FFF;
-  }
-  66% {
-    background: rgb(255, 0, 0);
-    box-shadow: -24px 0 #FFF, 24px 0 #FFF;
-  }
-  100% {
-    background: #FFF;
-    box-shadow: -24px 0 #FFF, 24px 0 rgb(255, 0, 0);
-  }
-}
+ 
     </style>
 </head>
 
@@ -249,7 +222,7 @@
     
     <div class="container">
         <header>
-            <a href="javascript:void(0)" class="closeBTN">✘</a>
+
             <p class="one" style="color: white; ">
                 About Me
             </p>
@@ -270,9 +243,7 @@
             
         </header>
     </div>
-    <span class="loader" id="loader"></span>
     <div class="container">
-        <button class="menu">Menu</button>
         <div class="middlecontainer">
             <div class="avatar"
                 style="align-items: center; justify-content: center; text-align: center; transition: all 1s ease"
@@ -551,26 +522,7 @@
     <script>
         AOS.init();
     </script>
-    <style>
-        .mousePillion{
-            height: 50px;
-            width: 50px;
-            position: fixed;
-            background-color: rgba(255, 255, 255, 0.391);
-            backdrop-filter: blur(5px);
-            border-radius: 100%;
-            transform: translate(-45%, -260%);
-            z-index: 2;
-            user-select: none;
-            pointer-events: none;
-        }
-        @media (max-width:768px){
-            .mousePillion{
-                display: none;
-            }
-        }
-    </style>
-    <div class="mousePillion"></div>
+    
 </body>
 
 </html>

@@ -6,7 +6,7 @@ one.addEventListener('click', run)
 let aboutMe = document.querySelector('.about')
 function run() {
 
-    aboutMe.style.boxShadow = '0px 0px 16px 2px rgb(255, 0, 0)';
+    aboutMe.style.boxShadow = '0px 0px 16px 2px rgb(255, , 0)';
     aboutMe.style.transition ='all 1s ease'
     setTimeout(removeShadow, 1000);
     window.location.href = '#about'
@@ -74,7 +74,7 @@ document.addEventListener('DOMContentLoaded',function(event){
       if (i < (text.length)) {
         // add next character to h1
         if(i >= 8){
-            document.querySelector("#ooo").innerHTML = text.substring(0, 8) + '<span style="color:rgb(255, 0, 0); text-shadow:0px 0px 12px rgb(255, 0, 0);">'+ text.substring(8, i+1) +'</span>' +'<span aria-hidden="true"></span>';
+            document.querySelector("#ooo").innerHTML = text.substring(0, 8) + '<span style="color:rgb(200, 40, 30); text-shadow:0px 0px 12px rgb(255, 0, 0);">'+ text.substring(8, i+1) +'</span>' +'<span aria-hidden="true"></span>';
         }else{
             document.querySelector("#ooo").innerHTML = text.substring(0, i+1) +'<span aria-hidden="true"></span>';
         }
@@ -109,50 +109,3 @@ document.addEventListener('DOMContentLoaded',function(event){
     // start the text animation
     StartTextAnimation(0);
   });
- 
-  document.onreadystatechange = function() {
-    if (document.readyState !== "complete") {
-        document.querySelector("body").style.visibility = "hidden";
-        document.querySelector("#loader").style.visibility = "visible";
-    } else {
-        document.querySelector("#loader").style.display = "none";
-        document.querySelector("body").style.visibility = "visible";
-    }
-};
-
-window.addEventListener("mousemove", (e)=>{
-  let t = e.screenY;
-  let l = e.screenX;
-  let elem = document.querySelector('.mousePillion');
-  elem.style.top = t + 'px';
-  elem.style.left = l + 'px';
-  console.log(t, l)
-})
-
-// open header on mobile
-let closeBTN = document.querySelector('.closeBTN');
-let menu = document.querySelector(".menu");
-let header = document.querySelector("header");
-let body = document.body;
-
-menu.addEventListener("click", (e)=>{
-  header.style.left = "0%";
-  e.target.style.display = 'none';
-  body.style.height = "100vh";
-  body.style.overflowY = "hidden";
-})
-
-// close header on mobile
-closeBTN.addEventListener("click", closeHeader)
-
-function closeHeader (e){
-  header.style.left = "-100%";
-  menu.style.display = "block";
-  body.style.height = "auto";
-  body.style.overflowY = "auto";
-}
-
-let headerPara = document.querySelectorAll('header p')
-headerPara.forEach((i)=>{
-  i.addEventListener('click',closeHeader)
-})
